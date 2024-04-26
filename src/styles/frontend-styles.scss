@@ -1,0 +1,10 @@
+// Please use ./styles.scss to add and update all styling.
+@use './styles';
+
+// // Frontend Specific Styles
+@use './abstracts/mixins/architecture' as architecture;
+
+// Apply container sizes to frontend - more specifity here compared to editor styles
+main {
+    @include architecture.site-structure();
+}

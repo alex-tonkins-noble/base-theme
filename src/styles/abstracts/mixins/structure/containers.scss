@@ -1,0 +1,20 @@
+@use "../../variables" as *;
+@use "../../mixins/breakpoints" as *;
+
+// Use this mixin to give any element the fullwidth container styles.
+@mixin container-base-styles() {
+	width: calc(100% - (var(--site-gutter) * 2));
+	box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin add-container-width($width: 'regular') {
+    @if $width == 'wide' {
+        max-width: var(--np-wide-size);
+    } @else if $width == 'regular' {
+        max-width: var(--np-regular-size);
+    } @else if $width == 'small' {
+        max-width: var(--np-small-size);
+    }
+}

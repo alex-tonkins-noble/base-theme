@@ -1,0 +1,19 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins/spacing/margins' as margins;
+
+.wp-block-np-section {
+    @include margins.initiate-top-level-margins();
+
+    &.has-background {
+        padding: var(--top-level-element-vertical-spacing) 0;
+
+        // If two blocks one after the other both have background colours, we remove the margin between them.
+        &:has(+ .wp-block-np-section.has-background) {
+            margin-bottom: 0;
+
+            + .wp-block-np-section {
+                margin-top: 0;
+            }
+        }
+    }
+}

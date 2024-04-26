@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+@mixin set-heading-styles($heading-level) {    
+    font-size: var(--#{$prefix}#{$heading-level}-size);
+    line-height: var(--#{$prefix}#{$heading-level}-line-height);
+    font-weight: var(--#{$prefix}#{$heading-level}-weight);
+}
+
+@mixin set-body-font-styles() {    
+    font-size: var(--#{$prefix}body-size);
+    line-height: var(--#{$prefix}body-line-height);
+    font-weight: var(--#{$prefix}body-weight);
+}
+
+@mixin set-button-font-styles() {
+    @include set-body-font-styles();
+}

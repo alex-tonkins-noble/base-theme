@@ -1,0 +1,47 @@
+@use '../abstracts/mixins/typography' as typography;
+
+h1,
+.is-style-h1 {
+    @include typography.set-heading-styles(h1);
+}
+
+h2,
+.is-style-h2 {
+    @include typography.set-heading-styles(h2);
+}
+
+h3,
+.is-style-h3 {
+    @include typography.set-heading-styles(h3);
+}
+
+h4,
+.is-style-h4 {
+    @include typography.set-heading-styles(h4);
+}
+
+h5,
+.is-style-h5 {
+    @include typography.set-heading-styles(h5);
+}
+
+h6,
+.is-style-h6 {
+    @include typography.set-heading-styles(h6);
+}
+
+// Styles to allow immediate content beneath Headings to be closer and read better.
+// TODO: Don't use a hardcoded, pixel value. Maybe use a variable, needs figuring out.
+.wp-block-heading {
+    &:has(+ p),
+    &:has(+ ul),
+    &:has(+ ol) {
+        margin-bottom: 10px;
+    }
+
+    + p,
+    + ul,
+    + ol {
+        margin-top: 10px;
+    }
+}

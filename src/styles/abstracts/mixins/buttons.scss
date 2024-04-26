@@ -1,0 +1,35 @@
+@use '../../abstracts/variables' as *;
+@use './typography' as typography;
+
+@mixin core-button-style() {
+    @include typography.set-button-font-styles();
+	padding: $button_padding_v $button_padding_h;
+	transition: $transition ease-in-out all;
+    border: 0;
+    border-radius: 0;
+	position: relative;
+	display: inline-block;
+    text-decoration: none;
+}
+
+@mixin button-style-primary() {
+    @include core-button-style();
+	background-color: var(--#{$prefix}primary);
+	color: var(--#{$prefix}white);
+
+    &:hover {
+		background: var(--#{$prefix}secondary);
+		color: var(--#{$prefix}white);
+	}
+}
+
+@mixin button-style-secondary() {
+    @include core-button-style();
+    background-color: var(--#{$prefix}secondary);
+    color: var(--#{$prefix}white);
+
+    &:hover {
+        background-color: var(--#{$prefix}tertiary);
+        color: var(--#{$prefix}white);
+    }
+}

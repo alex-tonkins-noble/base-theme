@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "np/container",
+	"version": "1.0.0",
+	"title": "Container",
+	"category": "page-layout",
+	"icon": "layout",
+	"description": "The content Container / Wrapper - for use directly within the Section Block.",
+	"keywords": [""],
+	"parent": ["np/section"],
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"enableContrastChecker": true,
+			"gradients": true,
+			"link": true
+		}
+	},
+	"attributes": {
+		"containerSize": {
+			"type": "string",
+			"default": "regular"
+		}
+	},
+	"textdomain": "np-container",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

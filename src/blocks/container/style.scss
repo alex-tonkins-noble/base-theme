@@ -1,0 +1,27 @@
+@use '../../styles/abstracts/mixins/structure/containers' as containers;
+
+.wp-block-np-container {
+    @include containers.container-base-styles();
+
+    &.container-size-small {
+        @include containers.add-container-width('small');
+    }
+
+    &.container-size-regular {
+        @include containers.add-container-width();
+    }
+    
+    &.container-size-wide {
+        @include containers.add-container-width('wide');
+    }
+
+    > * {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

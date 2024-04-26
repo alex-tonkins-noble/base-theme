@@ -1,0 +1,22 @@
+// Please use ./styles.scss to add and update all styling.
+@use './styles';
+
+// // Editor Specific Styles
+@use './abstracts/mixins/architecture' as architecture;
+
+:root {
+    // Apply the site structure to the .is-root-container class "main" is not a nested element, otherwise apply the site structure to main.
+    // We do this because Appearance > Editor > Templates lists out the Header, Main and Footer classes. Whereas individual posts list out just the content.
+    // This means that the HTML markup is different, so we have to apply the structure to the editor site based on these differences.
+    .is-root-container {
+        // Posts
+        &:not(:has(main)) {
+            @include architecture.site-structure();
+        }
+        
+        // Templates
+        > main {
+            @include architecture.site-structure();
+        }
+    }
+}

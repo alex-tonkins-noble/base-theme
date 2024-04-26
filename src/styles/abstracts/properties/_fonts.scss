@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+:root {
+    --#{$prefix}body-size: 16px;
+    --#{$prefix}body-line-height: 1.6em;
+    --#{$prefix}body-weight: 400;
+
+    --#{$prefix}h1-size: 60px;
+    --#{$prefix}h1-line-height: 1.4em;
+    --#{$prefix}h1-weight: 600;
+
+    --#{$prefix}h2-size: 48px;
+    --#{$prefix}h2-line-height: 1.4em;
+    --#{$prefix}h2-weight: 600;
+
+    --#{$prefix}h3-size: 36px;
+    --#{$prefix}h3-line-height: 1.4em;
+    --#{$prefix}h3-weight: 400;
+
+    --#{$prefix}h4-size: 24px;
+    --#{$prefix}h4-line-height: 1.4em;
+    --#{$prefix}h4-weight: 400;
+
+    --#{$prefix}h5-size: 18px;
+    --#{$prefix}h5-line-height: 1.4em;
+    --#{$prefix}h5-weight: 400;
+
+    --#{$prefix}h6-size: 16px;
+    --#{$prefix}h6-line-height: 1.4em;
+    --#{$prefix}h6-weight: 400;
+}

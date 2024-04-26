@@ -1,0 +1,31 @@
+{
+  "name": "nobleperforms",
+  "version": "1.0.0",
+  "description": "Noble Performs Base Theme",
+  "author": "Noble Performs",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0",
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "sass": "^1.32.8",
+    "webpack-remove-empty-scripts": "^1.0.4"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^12.17.0",
+    "@wordpress/blocks": "^12.25.0",
+    "@wordpress/components": "^25.14.0",
+    "@wordpress/data": "^9.18.0",
+    "@wordpress/element": "^5.25.0",
+    "@wordpress/i18n": "^4.49.0"
+  },
+  "scripts": {
+    "start": "wp-scripts start --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php",
+    "packages-update": "wp-scripts packages-update"
+  }
+}

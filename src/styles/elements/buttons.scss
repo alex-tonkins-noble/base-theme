@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins/buttons' as buttons;
+
+.btn,
+.button {
+    @include buttons.button-style-primary();
+
+    &--secondary {
+        @include buttons.button-style-secondary();
+    }
+}
+
+.wp-block-button {
+    .wp-block-button__link {
+        @include buttons.button-style-primary();
+    }
+    
+    &.is-style-btn-secondary {
+        .wp-block-button__link {
+            @include buttons.button-style-secondary();
+        }
+    }
+}

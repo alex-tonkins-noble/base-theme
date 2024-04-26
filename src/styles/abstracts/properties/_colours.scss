@@ -1,0 +1,11 @@
+@use '../variables' as *;
+
+:root {
+    --#{$prefix}primary: #001021;
+    --#{$prefix}secondary: #034748;
+    --#{$prefix}tertiary: #1481BA;
+
+    --#{$prefix}white: #fff;
+    --#{$prefix}black: #000;
+    --#{$prefix}grey: #fafafa;
+}

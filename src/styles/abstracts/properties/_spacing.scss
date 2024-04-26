@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+:root {
+    // Define the global site gutter. 
+    --site-gutter: 15px;
+
+    // Define the initial padding / vertical spacing amount to be used on specific top level elements.
+    --top-level-element-vertical-spacing: 40px;
+}

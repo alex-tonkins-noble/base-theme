@@ -1,0 +1,14 @@
+$prefix: 'np-';
+$transition: 0.2s;
+
+$button_padding_v: 10px;
+$button_padding_h: 15px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 769px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1440px,
+);

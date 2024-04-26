@@ -1,0 +1,33 @@
+@use './spacing/margins' as margins;
+@use './structure/containers' as containers;
+
+// This file defines the custom structure and architecture of the site.
+// We are NOT using all of WordPress' layout functionality out of the box, that is where this file comes in.
+// NOTE - This mixin is to be used within editor-styles.scss and frontend-styles.scss ONLY.
+
+@mixin site-structure() {
+    // Ensure all top level items adhere to the container widths and padding box sizing. Also change their margins to use the site-wide top level sizes.
+    > * {
+        box-sizing: border-box;
+    }
+
+    // TODO: This might need to be updated for all core WordPress blocks (that are not standard HTML elements)
+    > .wp-block-group,
+    > .wp-block-columns {
+        @include margins.initiate-top-level-margins();
+    }
+
+    // Any element immediately nested within the main element is assigned the regular container width, unless they are in the :not() selector - this is because they have their own rules.
+    > :not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide):not(.wp-block-np-section) {
+        @include containers.container-base-styles();
+        @include containers.add-container-width();
+    }
+
+    // alignwide works the same as above, however it's width is larger.
+    // This does mean the alignwide will stretch to the edge of the page. If we want to contain it, then we should use include the wide container mixins instead.
+    > .alignwide {
+        max-width: var(--np-wide-size);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

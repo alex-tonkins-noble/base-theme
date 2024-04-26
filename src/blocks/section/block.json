@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "np/section",
+	"version": "1.0.0",
+	"title": "Section",
+	"category": "page-layout",
+	"icon": "layout",
+	"description": "Group and contain content, add colours, features and more!",
+	"keywords": [""],
+	"parent": [null],
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"enableContrastChecker": true,
+			"gradients": true,
+			"link": true
+		}
+	},
+	"textdomain": "np-section",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,5 @@
+// This mixin is for use on top level elements only. It is a way to keep uniformity between group blocks, column blocks, section blocks, etc.
+@mixin initiate-top-level-margins() {
+    margin-top: var(--top-level-element-vertical-spacing);
+    margin-bottom: var(--top-level-element-vertical-spacing);
+}
