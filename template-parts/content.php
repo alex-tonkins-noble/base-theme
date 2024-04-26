@@ -11,8 +11,4 @@
 
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-<?php noble_performs_base_theme_post_thumbnail(); ?>
-
 <?php the_content(); ?>
-
-<?php noble_performs_base_theme_entry_footer(); ?>

@@ -1,7 +1,7 @@
 // Maybe rename this file, it accounts for any misc global site structure
 @use '../abstracts/variables' as *;
 
-.wp-site-blocks {
+.site {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
