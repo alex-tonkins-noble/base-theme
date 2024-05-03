@@ -279,50 +279,5 @@
 				}
 			}
 		}
-	},
-	"templateParts": [
-		{
-			"name": "header",
-			"title": "Header",
-			"area": "header"
-		},
-		{
-			"name": "footer",
-			"title": "Footer",
-			"area": "footer"
-		},
-		{
-			"name": "main",
-			"title": "Main",
-			"area": "general"
-		}
-	],
-	"customTemplates": [
-		{
-			"name": "post-sidebar-right",
-			"title": "Post: Two columns, right sidebar",
-			"postTypes": [ "post" ]
-		},
-		{
-			"name": "post-sidebar-left",
-			"title": "Post: Two columns, left sidebar",
-			"postTypes": [ "post" ]
-		},
-		{
-			"name": "page-sidebar-right",
-			"title": "Page: Two columns, right sidebar",
-			"postTypes": [ "page" ]
-		},
-		{
-			"name": "page-sidebar-left",
-			"title": "Page: Two columns, left sidebar",
-			"postTypes": [ "page" ]
-		},
-		{
-			"name": "page-template-patterns",
-			"title": "Template for block pattern layouts",
-			"postTypes": [ "page", "post" ]
-		}
-	],
-	"patterns": [ "heading-with-two-font-sizes-and-separators" ]
+	}
 }
